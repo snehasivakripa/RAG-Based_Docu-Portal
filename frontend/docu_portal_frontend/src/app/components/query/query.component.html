@@ -1,0 +1,12 @@
+   <div class="card">
+      <h2>Ask a Question</h2>
+      <textarea [(ngModel)]="query" placeholder="Enter your query here"></textarea>
+      <button (click)="ask()">Ask</button>
+
+      <div *ngIf="results.length > 0">
+        <h3>Results:</h3>
+        <ul>
+          <li *ngFor="let res of results">{{ res }}</li>
+        </ul>
+      </div>
+    </div>

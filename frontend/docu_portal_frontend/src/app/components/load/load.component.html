@@ -1,0 +1,7 @@
+ <div class="card">
+      <h2>Load Website Data</h2>
+      <input [(ngModel)]="url" placeholder="Enter website URL" />
+      <button (click)="load()">Load</button>
+
+      <div *ngIf="message" class="response">{{ message }}</div>
+    </div>

@@ -1,0 +1,7 @@
+<div class="card mt-3 p-3">
+  <h2>Upload PDF</h2>
+  <input type="file" (change)="onFileSelected($event)" accept="application/pdf" />
+  <button (click)="uploadPdf()" [disabled]="!selectedFile">Upload</button>
+
+  <div *ngIf="pdfMessage" class="response mt-2">{{ pdfMessage }}</div>
+</div>
